@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body ng-controller="HomeController as vm">
+   
+    <select ng-model="vm.selectedMake"
+            ng-options="make.name for make in vm.makes"
+            ng-change="vm.makes)"></select>
+    
+   
+    
+     <div class="container"></div>
+    <h1>hello troop7</h1>
+
+
+    <script src="~/Scripts/jquery-2.1.4.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-route.js"></script>
+    <script src="~/Scripts/angular-resource.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="~/ngApp/app.js"></script>
+    <script src="~/ngApp/Controllers/controllers.js"></script>
+    <script src="~/ngApp/Services/services.js"></script>
+
+</body>
+</html>
