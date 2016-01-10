@@ -11,8 +11,12 @@ var MyApp;
             CarService.prototype.showCars = function () {
                 return this.carResource.query();
             };
-            CarService.prototype.showMake = function () {
+            CarService.prototype.showMakes = function () {
                 return this.makeResource.query();
+            };
+            CarService.prototype.getCars = function (id) {
+                console.log(id);
+                return this.carResource.get({ id: id });
             };
             return CarService;
         })();

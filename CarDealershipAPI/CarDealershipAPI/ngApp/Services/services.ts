@@ -3,23 +3,24 @@
     export class CarService {
         private carResource;
         private makeResource;
-        constructor(private $resource: ng.resource.IResourceService) {
 
+        constructor(private $resource: ng.resource.IResourceService) {
             this.carResource = $resource("/api/cars/:id");
             this.makeResource = $resource("/api/makes");
         }
 
-        showCars() {
+        public showCars() {
             return this.carResource.query();
         }
-        showMake() {
 
+        public showMakes() {
             return this.makeResource.query();
         }
 
+        public getCars(id) {
+            console.log(id);
+            return this.carResource.get({id: id});
+        }
     }
-
-    angular.module("MyApp").service("CarService", CarService); 
-    
-
+    angular.module("MyApp").service("CarService", CarService);  
 }

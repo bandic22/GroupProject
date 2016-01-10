@@ -5,8 +5,8 @@ var MyApp;
         var HomeController = (function () {
             function HomeController(CarService) {
                 this.CarService = CarService;
-                this.makes = this.CarService.showMake();
-                this.cars = this.CarService.showCars();
+                this.makes = CarService.showMakes();
+                this.cars = CarService.showCars();
             }
             return HomeController;
         })();
